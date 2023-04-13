@@ -1,0 +1,7 @@
+export enum ERROR_CODE {
+  BAD_REQUEST = "400",
+  UNAUTHORIZED = "401",
+  NOT_FOUND = "404",
+  METHOD_NOT_ALLOWED = "405",
+  SYSTEM_ERROR = "1001",
+}

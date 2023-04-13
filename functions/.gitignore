@@ -1,0 +1,35 @@
+# Compiled JavaScript files
+**/*.js
+**/*.js.map
+lib/
+
+# Logs
+ui-debug.log
+
+# Except the ESLint config file
+!.eslintrc.js
+
+# Except the JEST config file
+!jest.config.js
+
+# TypeScript v1 declaration files
+typings/
+
+# Node.js dependency directory
+node_modules/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+#Environment
+.env
+env.json
+.runtimeconfig.json
+entry-application.json
+data/
