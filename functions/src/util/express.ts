@@ -1,4 +1,3 @@
-// gkc_hash_code : 01ERNTQXRDAFHMG3Q0VS9Q3CDE
 import express from "express";
 import * as bodyParser from "body-parser";
 import cors from "cors";

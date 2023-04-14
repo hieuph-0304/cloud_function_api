@@ -1,4 +1,3 @@
-// gkc_hash_code : 01ERNTQXRDAFHMG3Q0VS9Q3CDE
 import { app, methodNotAllowed, genericErrorHandler } from "../../util";
 import { functions } from "../../config";
 import { routerCommon } from "./router";

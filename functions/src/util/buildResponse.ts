@@ -1,22 +1,20 @@
-// gkc_hash_code : 01ERNTQXRDAFHMG3Q0VS9Q3CDE
-
 import { getCurrentTimestamp } from "./datetime";
 
-const buildError = (error: any, message = null) => {
+const buildError = (message: string | null, error: any) => {
   return {
     timestamp: getCurrentTimestamp().toDate(),
     success: false,
     errors: [error],
-    message: message,
+    message,
   };
 };
 
-const buildSuccess = (message: string, data: any = null) => {
+const buildSuccess = (message: string, data: any) => {
   return {
     timestamp: getCurrentTimestamp().toDate(),
     success: true,
-    data: data,
-    message: message,
+    data,
+    message,
   };
 };
 
