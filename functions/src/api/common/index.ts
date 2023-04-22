@@ -14,5 +14,5 @@ commonServer.use(methodNotAllowed);
 
 export const common = functions
   .runWith(FUNCTION_RUNTIME.OPTS_DEFAULT as RuntimeOptions)
-  .region(REGION.ASIA_NORTHEAST1)
+  .region(REGION.ASIA_SOUTHEAST1)
   .https.onRequest(commonServer);

@@ -6,11 +6,11 @@ export const FUNCTION_RUNTIME = {
 };
 
 export enum REGION {
-  ASIA_NORTHEAST1 = "asia-northeast1",
+  ASIA_SOUTHEAST1 = "asia-southeast1-a",
 }
 
 export enum TIME_ZONE {
-  ASIA_TOKYO = "Asia/Tokyo",
+  ASIA_SINGAPORE = "Asia/Singapore",
 }
 
 export enum DIFF_UNIT {
@@ -20,4 +20,8 @@ export enum DIFF_UNIT {
   DAYS = "days",
   MONTHS = "months",
   YEARS = "years",
+}
+
+export enum CRON_TIME {
+  COMMON = "* * * * *",
 }

@@ -29,7 +29,4 @@ node_modules/
 
 #Environment
 .env
-env.json
-.runtimeconfig.json
-entry-application.json
 data/
