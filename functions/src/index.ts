@@ -1,3 +1,3 @@
-import { common } from "./api"
+import { common } from "./api";
 
-export { common }
+export { common };

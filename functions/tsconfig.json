@@ -1,16 +1,45 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
+    "removeComments": false,
     "module": "commonjs",
+    "moduleResolution": "node",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
+    "esModuleInterop": true,
     "outDir": "lib",
-    "sourceMap": true,
     "strict": true,
-    "target": "es2017",
-    "esModuleInterop": true,  
+    "target": "es2020",
+    "typeRoots": ["./src/types", "node_modules/@types"],
+    "resolveJsonModule": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/api/*": [
+        "api/*"
+      ],
+      "@/common/*": [
+        "common/*"
+      ],
+      "@/config/*": [
+        "config/*"
+      ],
+      "@/store/*": [
+        "store/*"
+      ],
+      "@/util/*": [
+        "util/*"
+      ],
+      "@/model/*": [
+        "model/*"
+      ],
+      "@/service/*": [
+        "service/*"
+      ],
+      "@/trigger/*": [
+        "trigger/*"
+      ]
+    }
   },
-  "compileOnSave": true,
-  "include": [
-    "src"
-  ]
+  "include": ["src"],
+  "compileOnSave": true
 }

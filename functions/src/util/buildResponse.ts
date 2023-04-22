@@ -1,6 +1,6 @@
 import { getCurrentTimestamp } from "./datetime";
 
-const buildError = (message: string | null, error: any) => {
+const buildError = (error: any, message = null) => {
   return {
     timestamp: getCurrentTimestamp().toDate(),
     success: false,
@@ -9,7 +9,7 @@ const buildError = (message: string | null, error: any) => {
   };
 };
 
-const buildSuccess = (message: string, data: any) => {
+const buildSuccess = (message: string, data: any = null) => {
   return {
     timestamp: getCurrentTimestamp().toDate(),
     success: true,

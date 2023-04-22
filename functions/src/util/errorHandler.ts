@@ -5,13 +5,6 @@ import { NextFunction, Request, Response } from "express";
 import { ERROR_CODE, MESSAGE } from "../common";
 import { logger } from "firebase-functions";
 
-/**
- * Middleware to handle empty JSON body requests and other edge cases if any.
- *
- * @param req
- * @param res
- * @param next
- */
 const emptyJsonBodyRequest = (
   req: Request,
   res: Response,
@@ -31,12 +24,6 @@ const emptyJsonBodyRequest = (
   next();
 };
 
-/**
- * Error response middleware for 404 not found.
- *
- * @param {Object} req
- * @param {Object} res
- */
 const notFound = (req: Request, res: Response): void => {
   res.status(HttpStatus.NOT_FOUND).json(
     buildError({
@@ -46,13 +33,6 @@ const notFound = (req: Request, res: Response): void => {
   );
 };
 
-/**
- * Method not allowed error middleware. This middleware should be placed at
- * the very bottom of the middleware stack.
- *
- * @param {Object} req
- * @param {Object} res
- */
 const methodNotAllowed = (req: Request, res: Response): void => {
   const error = buildError({
     code: ERROR_CODE.METHOD_NOT_ALLOWED,
@@ -64,14 +44,6 @@ const methodNotAllowed = (req: Request, res: Response): void => {
   res.status(HttpStatus.METHOD_NOT_ALLOWED).json(error);
 };
 
-/**
- * Generic error response middleware for validation and internal server errors.
- *
- * @param  {Error}   err
- * @param  {Request}   req
- * @param  {Response}   res
- * @param  {NextFunction} next
- */
 const genericErrorHandler = (
   err: Error,
   req: Request,
@@ -88,12 +60,6 @@ const genericErrorHandler = (
   next();
 };
 
-/**
- * Build error response for errors.
- *
- * @param   {Error} err
- * @returns {Object}
- */
 const handleError = (err: any) => {
   const error: any = {
     code: ERROR_CODE.SYSTEM_ERROR,
